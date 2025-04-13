@@ -206,21 +206,28 @@ html, body {
     max-width: 100%;
   }
 
-  .searchbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Ensures search bar is centered */
-    gap: 10px;
-    width: 100%;
-  }
+ .searchbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0 10px; /* Add some side padding to avoid touching screen edges */
+  box-sizing: border-box;
+}
 
-  .searchbar input {
-    width: 100%;
-    margin-left: 0;
-  }
+.searchbar input {
+  width: 100%; /* Full width inside padding */
+  max-width: 500px; /* Prevent it from being too wide on medium devices */
+  margin-left: 0;
+  font-size: 16px;
+}
 
-  button[type="submit"] {
-    width: auto;
-    align-self: flex-start;
-  }
+button[type="submit"] {
+  width: 100%;
+  max-width: 150px;
+  align-self: center; /* Centers the button below input */
+}
+
+
 }
