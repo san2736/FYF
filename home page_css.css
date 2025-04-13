@@ -185,6 +185,45 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: auto; /* allow horizontal scroll instead of squeezing layout */
+    }
+
+    .nav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .girl_thinking img,
+    .fyf img {
+        width: auto;
+        max-width: none;
+    }
+
+    .searchbar {
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .search-form {
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .search-form input[type="text"] {
+        min-width: 250px;
+        flex-shrink: 0;
+    }
+
+    .search-form button {
+        flex-shrink: 0;
+    }
+}
+
 </style>
 
 </body>
