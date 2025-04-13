@@ -132,5 +132,57 @@ autocomplete(document.getElementById("facultyInput"), Object.keys(facultyNames))
 });
 
 </script>
+<style>
+.autocomplete-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+}
+
+
+.autocomplete-items div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item div:hover {
+    background-color: #f0f0f0;
+}
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px; 
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+</style>
 </body>
 </html>
