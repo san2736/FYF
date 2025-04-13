@@ -162,28 +162,45 @@ html, body {
   .nav ul {
     flex-direction: row;
     padding-left: 0;
-    height: auto;
+    height: 60px; /* smaller navbar */
     white-space: nowrap;
     justify-content: flex-start;
     overflow-x: auto;
   }
 
   .nav li {
-    margin: 0 20px;
-    font-size: large;
+    margin: 0 15px;
+    font-size: medium;
+    height: 60px;
     flex-shrink: 0;
+  }
+
+  .nav a {
+    line-height: 60px;
+    font-size: medium;
+    padding: 0 10px;
+  }
+
+  /* Swap image and searchbar order */
+  .mobile-column {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .girl_thinking img {
     height: 200px;
-    margin-top: 50px;
+    margin-top: 0;
     margin-right: 0;
     max-width: 100%;
   }
 
   .fyf img {
-    margin-top: 50px;
     height: 100px;
+    margin-top: 0;
     margin-left: 0;
     max-width: 100%;
   }
@@ -192,8 +209,8 @@ html, body {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    margin-left: 20px;
-    width: 90%;
+    margin-left: 0;
+    width: 100%;
   }
 
   .searchbar input {
