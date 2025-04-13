@@ -89,7 +89,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
-<style>
+
 .autocomplete-items {
     position: absolute;
     top: 100%;
@@ -140,7 +140,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
-</style>
+
 
 /* Global fix */
 * {
