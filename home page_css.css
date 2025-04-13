@@ -1,44 +1,47 @@
-body{
+body {
   margin: 0;
   background-image: url("mpstme dark bg.jpeg");
   opacity: 1;
 }
-.nav
-{
+
+.nav {
   display: flex;
   justify-content: flex-end;
-    ul {
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        list-style-type: none; 
-        background-color: rgb(179, 179, 179);
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        padding-left: 200px;
-        height: 90px;
-      }
-      a
-      {
-        color: black;
-        text-decoration: none;
-        padding: 0 15px;
-        display: inline-block;
-        text-align: center;
-        transition: background-color 0.3s ease;
-        white-space: nowrap;
-        line-height: 90px;
-      }
-      a:hover{
-        background-color: rgb(122, 122, 122);
-      }
-      li{
-        font-size: xx-large;
-        float: left;
-        margin: 0 120px;
-        height: 90px;
-      }
+}
+
+.nav ul {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  list-style-type: none;
+  background-color: rgb(179, 179, 179);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-left: 200px;
+  height: 90px;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+  padding: 0 15px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  line-height: 90px;
+}
+
+.nav a:hover {
+  background-color: rgb(122, 122, 122);
+}
+
+.nav li {
+  font-size: xx-large;
+  float: left;
+  margin: 0 120px;
+  height: 90px;
 }
 
 .girl_thinking img {
@@ -46,14 +49,24 @@ body{
   margin-top: 175px;
   margin-right: 100px;
 }
-.fyf img{
+
+.fyf img {
   margin-top: 250px;
   height: 200px;
   margin-left: 50px;
 }
-.searchbar input{
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.searchbar input {
   margin-left: 75px;
-  width: 700px; 
+  width: 700px;
   height: 20px;
   border: 3px solid rgb(0, 17, 115);
   border-radius: 10px;
@@ -62,3 +75,61 @@ body{
   font-family: 'Times New Roman', Times, serif;
 }
 
+button[type="submit"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query for Phones */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    padding-left: 0;
+    height: auto;
+  }
+
+  .nav li {
+    margin: 0;
+    font-size: large;
+    text-align: center;
+  }
+
+  .girl_thinking img {
+    height: 200px; /* Reduce image size */
+    margin-top: 50px;
+    margin-right: 0;
+  }
+
+  .fyf img {
+    margin-top: 50px;
+    height: 100px; /* Reduce image size */
+    margin-left: 0;
+  }
+
+  .searchbar {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 20px;
+  }
+
+  .searchbar input {
+    width: 90%; /* Make input field take up most of the screen width */
+    margin-left: 0;
+  }
+
+  button[type="submit"] {
+    width: auto; /* Allow button to adjust its size */
+    align-self: flex-start;
+  }
+}
