@@ -182,11 +182,11 @@ html, body {
     padding: 0 10px;
   }
 
-  /* Swap image and searchbar order */
+  /* Corrected Order: Image First, then Search Bar */
   .mobile-column {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
+    flex-direction: column; /* This ensures image comes first, followed by the search bar */
+    align-items: center; /* Centers content for a better mobile view */
     gap: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -207,10 +207,10 @@ html, body {
   }
 
   .searchbar {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Ensures search bar is centered */
     gap: 10px;
-    margin-left: 0;
     width: 100%;
   }
 
